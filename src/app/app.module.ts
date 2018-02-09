@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialModule
+  ],
+  exports: [
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

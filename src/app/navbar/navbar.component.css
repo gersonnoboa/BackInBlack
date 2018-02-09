@@ -1,0 +1,8 @@
+.mat-elevation-z5 {
+    position: relative;
+    z-index: 2;
+ }
+
+mat-toolbar > span {
+    padding-right: 20px;
+}
