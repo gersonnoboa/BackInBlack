@@ -19,3 +19,7 @@ Since the component asks the service for a KPI object, the application could be 
 ## Task 2
 
 The second task deals with the Fortumo's customer portal. It is self-explanatory, with sections for different improvements suggested after thoroughly using the website in desktop and mobile devices. I asked for help from other people in order to reach some conclusions, which is a practice I normally do with almost all of my projects.
+
+## Limitations
+
+As the dashboard is meant for displaying in big screens (as per the instructions), the site is laid out in a way that maximizes screen usage. This means that, although it doesn't break, the app does not display in a good way on mobile devices.
