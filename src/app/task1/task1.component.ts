@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Task1Service } from './task1.service';
+import { Observable } from 'rxjs/Rx';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-task1',
@@ -8,47 +11,39 @@ import { Component, OnInit } from '@angular/core';
 export class Task1Component implements OnInit {
   
   chartData: SingleChartData;
+  private subscription: Subscription;
 
-  constructor() { }
+  constructor(private service: Task1Service) { }
 
   ngOnInit() {
     this.generateData();
+    let timer = Observable.timer(5000, 2000);
+    this.subscription = timer.subscribe(t=> {
+      if (!this.updateData()){
+        this.subscription.unsubscribe();
+      }
+    })
   }
 
   generateData() {
-    console.log("generating data");
-    let gtv = this.getGTV();
+    let gtv = this.service.getGTV();
     let chartData = new SingleChartData();
     chartData.xAxis = gtv.xUnit;
     chartData.yAxis = gtv.yUnit;
     chartData.maxValue = gtv.target;
     chartData.thresholdValue = gtv.target;
-    chartData.setValues(gtv.getSingleResultsWithMonth());
+    chartData.setValues(gtv.results);
     this.chartData = chartData;
+
+    return true;
   }
 
-  getGTV() {
-    let gtv = new KPI();
-    gtv.name = "GTV";
-    gtv.target = 100000000;
-    gtv.yUnit = "€";
-    gtv.xUnit = "Month";
-    gtv.results = [
-      3068985,
-      4979041,
-      5110147,
-      10038063,
-      20480972,
-      32864163,
-      39112224,
-      58878404,
-      62686337,
-      79203356,
-      87848175,
-      102627643
-    ];
+  updateData() {
+    let gtv = this.service.getGTV();
+    if (gtv == null) return false;
 
-    return gtv;
+    this.chartData.setValues(gtv.results);
+    return true;
   }
 }
 
@@ -63,14 +58,33 @@ class SingleChartData {
   lastColorScheme: ColorScheme;
 
   setValues(values) {
-    this.values = values;
+    this.values = this.getSingleResultsWithMonth(values);
     this.colorScheme = this.getColorScheme();
     this.lastValue = this.getLastValue();
     this.lastColorScheme = this.getLastColorScheme();
   }
 
+  getSingleResultsWithMonth(values) {
+    let results = values;
+
+    if (values.length > 12) {
+      results = values.slice(0, 11);
+    }
+
+    let months = Months.getMonths();
+
+    let singleData = new Array<SingleChartElement>();
+
+    for (let index = 0; index < results.length; index++) {
+      const month = months[index];
+      const element = results[index];
+      singleData.push(new SingleChartElement(month, element));
+    }
+
+    return singleData;
+  }
+
   getColorScheme() {
-    console.log("getting color scheme");
     let domain = [];
     this.values.forEach(element => {
       let aboveThreshold = this.compareValueWithThreshold(element.value);
@@ -121,60 +135,13 @@ class SingleChartElement {
   }
 }
 
-class KPI {
-  name: string;
-  target: number;
-  yUnit: string;
-  xUnit: string;
-  results: Array<number>;
-
-  lastPercentageCompleted() {
-    let resultsLength = this.results.length;
-    if (resultsLength < 1) return 0;
-
-    let lastValue = this.results[resultsLength - 1];
-    let percentage = lastValue / this.target;
-
-    if (percentage > 1.0) {
-      return 100;
-    }
-    else {
-      return percentage * 100;
-    }
-  }
-
-  getSingleResultsWithMonth() {
-    let results = this.results;
-
-    // if (this.results.length == 0) {
-    //   return [];
-    // } 
-    // else 
-    if (this.results.length > 12) {
-      results = this.results.slice(0, 11);
-    }
-
-    let months = Months.getMonths();
-
-    let singleData = new Array<SingleChartElement>();
-
-    for (let index = 0; index < results.length; index++) {
-      const month = months[index];
-      const element = results[index];
-      singleData.push(new SingleChartElement(month, element));
-    }
-
-    return singleData;
-  }
+class ColorIndicators {
+  static aboveThreshold = "#5AA454";
+  static belowThreshold = "#A10A28";
 }
 
 class Months {
   static getMonths() {
     return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   }
-}
-
-class ColorIndicators {
-  static aboveThreshold = "#5AA454";
-  static belowThreshold = "#A10A28";
 }

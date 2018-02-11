@@ -9,6 +9,7 @@ import { Task1Component } from './task1/task1.component';
 import { Task2Component } from './task2/task2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { Task1Service } from './task1/task1.service';
 
 const appRoutes: Routes = [
   { path: 'task1', component: Task1Component },
@@ -34,7 +35,9 @@ const appRoutes: Routes = [
   exports: [
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    Task1Service
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
