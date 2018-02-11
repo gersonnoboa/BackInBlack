@@ -1,27 +1,21 @@
 # BackInBlack
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+This project was created for completing the Fortumo's home assignment.
 
-## Development server
+## Task 1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The first task shows a dashboard with information about the GTV key performance indicator (KPI). Since this data will be constantly updated throughout the year, I simulated a situation in which new data comes and the dashboard updates the information accordingly.
 
-## Code scaffolding
+For all graphs, there are two primary colors: green and red. When the value has not reached the target (field endOfYearTarget), then the information is shown in red. When the value reaches the target (as in December in the current example), then the information is displayed in green.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The vertical bar graph shows the total volume as it comes from the provided data. The month information is added to it, assuming that the first value is for January, the second for February, and so on.
 
-## Build
+The upper right graph shows the last value from the provided data. Assuming that the bar chart is showing information until August, then this graph shows the value for August. This is done so that it is easy to determine the exact current value, since you need to hover over a bar to see its value. There's also a line that changes its color according to the rules stated above.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The lower right graph shows the values from all the current months. This is also done to aid the information in the graph.
 
-## Running unit tests
+Since the component asks the service for a KPI object, the application could be adjusted to display X amount of KPIs. However, they wouldn't be able to be shown one next to the other, but one by one.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Task 2
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The second task deals with the Fortumo's customer portal. It is self-explanatory, with sections for different improvements suggested after thoroughly using the website in desktop and mobile devices. I asked for help from other people in order to reach some conclusions, which is a practice I normally do with almost all of my projects.
