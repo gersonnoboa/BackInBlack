@@ -23,3 +23,5 @@ The second task deals with the Fortumo's customer portal. It is self-explanatory
 ## Limitations
 
 As the dashboard is meant for displaying in big screens (as per the instructions), the site is laid out in a way that maximizes screen usage. This means that, although it doesn't break, the app does not display in a good way on mobile devices.
+
+Also, because the assignment stated compatibility with Chrome, then my testing was done in the latest version of Chrome and Opera. Edge and Firefox work fine except for an overlap in the text of one graph. This is a problem with the graph library itself.

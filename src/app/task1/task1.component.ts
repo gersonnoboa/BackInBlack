@@ -24,7 +24,7 @@ export class Task1Component implements OnInit, OnDestroy {
       if (!this.updateData()){
         this.subscription.unsubscribe();
       }
-    })
+    });
   }
 
   ngOnDestroy(): void {

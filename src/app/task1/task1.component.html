@@ -1,8 +1,5 @@
 <div class="table-container height-100 width-100">
-  <!-- <div class="table-row inner-toolbar">
-    <mat-toolbar class="inner-toolbar">Task 1</mat-toolbar>
-  </div> -->
-  <div class="table-row">
+  <div class="table-row height-100">
     <mat-grid-list cols="2" rowHeight="fit" class="height-100" gutterSize="20px">
       <mat-grid-tile [rowspan]="2">
         <ngx-charts-bar-vertical [results]="chartData.values" [scheme]="chartData.colorScheme" [xAxis]="true" [yAxis]="true"
@@ -13,11 +10,6 @@
         <ngx-charts-linear-gauge [value]="chartData.lastValue" [scheme]="chartData.lastColorScheme" [min]="0" [max]="chartData.maxValue"
         [units]="chartData.yAxis"></ngx-charts-linear-gauge>
       </mat-grid-tile>
-      <!-- <mat-grid-tile>
-        <ngx-charts-gauge [results]="chartData.values" [scheme]="chartData.colorScheme" [min]="0" [max]="chartData.maxValue" 
-        [angleSpan]="240" [startAngle]="-120" [units]="chartData.yAxis" [bigSegments]="10" [smallSegments]="5">
-        </ngx-charts-gauge>
-      </mat-grid-tile> -->
       <mat-grid-tile>
         <ngx-charts-number-card [results]="chartData.values" [scheme]="chartData.colorScheme">
         </ngx-charts-number-card>
