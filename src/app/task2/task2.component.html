@@ -1,4 +1,103 @@
-<mat-toolbar class="inner-toolbar">Task 2</mat-toolbar>
 <div class="padded-content-container">
-  Content 2
+
+  <mat-card>
+    <mat-card-content>
+      <h3>UX Improvements</h3>
+      <p>I want to say that I really like the style of the support page. While other websites have a support page that is normally not that easy to navigate and has you go through categories of questions or similar, this one tries to be a little more interactive and less daunting.</p>
+
+      <p>Saying that, I have to point out some minor issues that I found. I have classified these in order of seriousness, where a blue one is a mild issue that could be overlooked, a yellow one is a medium one that might be considered for the future, and a red one is an urgent one that should be fixed as soon as possible. In my opinion, of course. I have also added codes to better reference the issues in other sections.</p>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-01</span>
+            <span class="badge badge-danger">Urgent</span>
+          </p>
+          Website is only in English, so the picker for selecting a language is redundant. It should either be removed, or more languages
+          added. Although I know the difficulties of localization, translation should be the optimal solution, considering the customers
+          Fortumo normally operates with. As a Latin American, I can attest to the fact that a reduced percentage of people speak English,
+          making the portal useless for them.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-02</span>
+            <span class="badge badge-warning">Medium</span>
+          </p>
+          <p>The above issue present the next issue. When using Google Chrome with its translation tool and selecting the following options:</p>
+          <p>I'm not able to make a payment > Estonia</p>
+          <p>The translation makes the carrier picker to display white cells at the bottom of "My operator is missing." The amount of cells is equal to the amount of carriers Fortumo works in that country. So, for example, in Estonia, it presents three empty cells (because of Telia, Elisa and Tele2), while in Ecuador it presents two (because of Claro and Movistar). This problem is only present in Chrome, since it is the one that offers translation automatically.</p>
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-03</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          It is not clear at first that clicking on one of the Fortumo bubbles (red ones) makes you go back to the prompt for answer for that specific question. At first, I thought that the only way of resetting the control was to refresh the website. I made an experiment with two non-IT women and they also didn't figure out until I told them. A small prompt about it might resolve this issue very quickly.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-04</span>
+            <span class="badge badge-warning">Medium</span>
+          </p>
+          When you select something, scrolling upwards is not allowed with the trackpad. This makes it difficult to go back to the previous options and reset the control. Although scrolling downwards when selecting an option is nice, scrolling up should not be disallowed.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-05</span>
+            <span class="badge badge-warning">Medium</span>         
+          </p>
+          Country picker is not searchable, making it complicated for people who live in alphabetically-unlucky countries.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-06</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          When prompting the user to click on a screenshot to enlarge it, the image is still not enlarged enough to be useful, primarily for people whose eyesight is starting to fail. Zooming in the whole window fortunately addresses the issue (although the image looks blurry then), but maybe incorporating a image viewer that fills the whole window would address this issue a bit better.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-07</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          It is not possible to go back to the company's main site when in the support portal. If you open it through the Fortumo's website, then you open a new tab, which mitigates this issue. However, if someone gets this link from a call center or something similar, then the only way of going to the company's website is through manual typing on the address bar.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-07</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          There is inconsistency between the action needed to go to the next option. For almost all questions, you just need to press an option to continue, but for the country picker, you need to select it and then press a green button. While I understand the need for this when prompting for a phone number, the country picker could trigger its action on selecting an option.
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-08</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          The "I would like to get more information" option is ambiguously worded, especially since some options that unlock after pressing it do not deal with more information, but with troubleshooting questions. Perhaps a fourth option should be added for handling these troubleshoot questions (like "I received a payment code" and "Did I get subscribed to a service?"). My logic behind this is that I would like to get more information sounds like wanting information about the company itself, which is something addressed by the questions about Fortumo and spending limits. However, if I have received a payment code that I might now know of, I wouldn't like to know more information about Fortumo but rather know what to do with the code I just received, since my first fear might be that I am being charged for something I haven't asked for.
+        </li>
+      </ul>
+
+      <h5>Other</h5>
+      <p>Other minor inconveniences I found that are not fully related to UX are: </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code OT-01</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+           As of time of writing, the year in the footer says "2017."
+        </li>
+      </ul>
+      
+      <h3>Performance Improvements</h3>
+      
+      <h3>Compatibility Issues</h3>
+      
+      <h3>Security Vulnerabilities</h3>
+      
+      <h3>Technologies Used</h3>
+    </mat-card-content>
+  </mat-card>
+  
 </div>
