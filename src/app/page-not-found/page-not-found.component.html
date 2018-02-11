@@ -1,9 +1,12 @@
-<div class="content-container">
+<div class="padded-content-container">
   <mat-card>
     <mat-card-title>Page not found</mat-card-title>
     <mat-card-content>
       <p>The page you are looking for is not available.</p>
-      <p><button mat-raised-button color="primary" [routerLink]="['../task1']">Go to home</button></p>
+      <p class="buttons">
+        <button mat-raised-button color="primary" [routerLink]="['../task1']">Go to Task 1</button>
+        <button mat-raised-button color="primary" [routerLink]="['../task2']">Go to Task 2</button>
+      </p>
     </mat-card-content>
 
   </mat-card>

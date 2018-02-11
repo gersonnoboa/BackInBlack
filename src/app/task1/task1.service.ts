@@ -34,4 +34,8 @@ export class Task1Service {
     gtv.results = this.results.slice(0, this.currentMonth);
     return gtv;
   }
+
+  reset() {
+    this.currentMonth = 0;
+  }
 }

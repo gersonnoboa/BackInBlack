@@ -3,6 +3,7 @@ import { Task1Service } from './task1.service';
 import { Observable } from 'rxjs/Rx';
 import { Subscription } from 'rxjs/Subscription';
 import { SingleChartData } from '../classes/single-chart-data';
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-task1',
@@ -10,8 +11,7 @@ import { SingleChartData } from '../classes/single-chart-data';
   styleUrls: ['./task1.component.css']
 })
 
-export class Task1Component implements OnInit {
-  
+export class Task1Component implements OnInit, OnDestroy {
   chartData: SingleChartData;
   private subscription: Subscription;
 
@@ -25,6 +25,15 @@ export class Task1Component implements OnInit {
         this.subscription.unsubscribe();
       }
     })
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription != null) {
+      this.subscription.unsubscribe();
+    }
+    this.service.reset();
+    this.chartData = null;
+    
   }
 
   generateData() {
