@@ -2,21 +2,27 @@
 
   <mat-card>
     <mat-card-content>
+      <h3>Introduction</h3>
+      <p>I want to say that I really like the style of the support page. While other websites have a support page that is normally
+        not that easy to navigate and has you go through categories of questions or similar, this one tries to be a little more
+        interactive and less daunting.</p>
+      
+      <p>Saying that, I have to point out some minor issues that I found across different categories. I have classified these in order of seriousness, where a
+        blue one is a mild issue that could be overlooked, a yellow one is a medium one that should be considered for the future,
+        and a red one is an urgent one that should be fixed as soon as possible. In my opinion, of course. I have also added codes
+        to better reference the issues in different sections.</p>
       <h3>UX Improvements</h3>
-      <p>I want to say that I really like the style of the support page. While other websites have a support page that is normally not that easy to navigate and has you go through categories of questions or similar, this one tries to be a little more interactive and less daunting.</p>
-
-      <p>Saying that, I have to point out some minor issues that I found. I have classified these in order of seriousness, where a blue one is a mild issue that could be overlooked, a yellow one is a medium one that might be considered for the future, and a red one is an urgent one that should be fixed as soon as possible. In my opinion, of course. I have also added codes to better reference the issues in other sections.</p>
-
+      <p>After analyzing the support portal myself and asking two non-IT people about it, these are the UX improvements I have identified.</p>
       <ul class="list-group">
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-01</span>
             <span class="badge badge-danger">Urgent</span>
           </p>
-          Website is only in English, so the picker for selecting a language is redundant. It should either be removed, or more languages
+          <p>Website is only in English, so the picker for selecting a language is redundant. It should either be removed, or more languages
           added. Although I know the difficulties of localization, translation should be the optimal solution, considering the customers
           Fortumo normally operates with. As a Latin American, I can attest to the fact that a reduced percentage of people speak English,
-          making the portal useless for them.
+          making the portal useless for them.</p>
         </li>
         <li class="list-group-item">
           <p>
@@ -30,73 +36,144 @@
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-03</span>
-            <span class="badge badge-info">Minor</span>
+            <span class="badge badge-warning">Medium</span>
           </p>
-          It is not clear at first that clicking on one of the Fortumo bubbles (red ones) makes you go back to the prompt for answer for that specific question. At first, I thought that the only way of resetting the control was to refresh the website. I made an experiment with two non-IT women and they also didn't figure out until I told them. A small prompt about it might resolve this issue very quickly.
+          <p>When you select something, scrolling upwards is not allowed with the trackpad. This makes it difficult to go back to the previous options and reset the control. Although scrolling downwards when selecting an option is nice, scrolling up should not be disallowed.</p>
         </li>
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-04</span>
-            <span class="badge badge-warning">Medium</span>
+            <span class="badge badge-warning">Medium</span>         
           </p>
-          When you select something, scrolling upwards is not allowed with the trackpad. This makes it difficult to go back to the previous options and reset the control. Although scrolling downwards when selecting an option is nice, scrolling up should not be disallowed.
+          <p>Country picker is not searchable, making it complicated for people who live in alphabetically-unlucky countries.</p>
         </li>
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-05</span>
-            <span class="badge badge-warning">Medium</span>         
+            <span class="badge badge-warning">Medium</span>
           </p>
-          Country picker is not searchable, making it complicated for people who live in alphabetically-unlucky countries.
+          <p>The site asks for your phone number in case you want to make an email request. Since a phone number is a very sensitive
+            piece of information, I think it should not be mandatory to provide it, unless it is absolutely required for the case.
+            It should be explained why the number is required, especially because of the fact that Fortumo is a payments platform.</p>
         </li>
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-06</span>
             <span class="badge badge-info">Minor</span>
           </p>
-          When prompting the user to click on a screenshot to enlarge it, the image is still not enlarged enough to be useful, primarily for people whose eyesight is starting to fail. Zooming in the whole window fortunately addresses the issue (although the image looks blurry then), but maybe incorporating a image viewer that fills the whole window would address this issue a bit better.
+          <p>It is not clear at first that clicking on one of the Fortumo bubbles (red ones) makes you go back to the prompt for answer
+            for that specific question. At first, I thought that the only way of resetting the control was to refresh the website.
+            I made an experiment with two non-IT women and they also didn't figure it out until I told them. A small prompt about
+            it might resolve this issue very quickly.</p>
         </li>
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-07</span>
             <span class="badge badge-info">Minor</span>
           </p>
-          It is not possible to go back to the company's main site when in the support portal. If you open it through the Fortumo's website, then you open a new tab, which mitigates this issue. However, if someone gets this link from a call center or something similar, then the only way of going to the company's website is through manual typing on the address bar.
-        </li>
-        <li class="list-group-item">
-          <p>
-            <span class="issue-code">Code UX-07</span>
-            <span class="badge badge-info">Minor</span>
-          </p>
-          There is inconsistency between the action needed to go to the next option. For almost all questions, you just need to press an option to continue, but for the country picker, you need to select it and then press a green button. While I understand the need for this when prompting for a phone number, the country picker could trigger its action on selecting an option.
+          <p>When prompting the user to click on a screenshot to enlarge it, the image is still not enlarged enough to be useful, primarily for people whose eyesight is starting to fail. This is also very apparent when using a mobile device. Zooming in the whole window fortunately addresses the issue (although the image looks blurry then), but maybe incorporating a image viewer that fills the whole window would address this issue a bit better.</p>
         </li>
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code UX-08</span>
             <span class="badge badge-info">Minor</span>
           </p>
-          The "I would like to get more information" option is ambiguously worded, especially since some options that unlock after pressing it do not deal with more information, but with troubleshooting questions. Perhaps a fourth option should be added for handling these troubleshoot questions (like "I received a payment code" and "Did I get subscribed to a service?"). My logic behind this is that I would like to get more information sounds like wanting information about the company itself, which is something addressed by the questions about Fortumo and spending limits. However, if I have received a payment code that I might now know of, I wouldn't like to know more information about Fortumo but rather know what to do with the code I just received, since my first fear might be that I am being charged for something I haven't asked for.
+          <p>The "I would like to get more information" option is ambiguously worded, especially since some options that unlock after
+            pressing it do not deal with more information, but with troubleshooting questions. Perhaps a fourth option should be
+            added for handling these troubleshoot questions (like "I received a payment code" and "Did I get subscribed to a service?").</p>
+          <p>My logic behind this is that I would like to get more information sounds like wanting information about the company itself,
+            which is something addressed by the questions about Fortumo and spending limits. However, if I have received a payment
+            code that I might now know of, I wouldn't like to know more information about Fortumo but rather know what to do with
+            the code I just received, since my first fear might be that I am being charged for something I haven't asked for.</p>
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-09</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          <p>There is inconsistency between the action needed to go to the next option. For almost all questions, you just need to press an option to continue, but for the country picker, you need to select it and then press a green button. While I understand the need for this when prompting for a phone number, the country picker could trigger its action on selecting an option.</p>
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-10</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          <p>It is not possible to go back to the company's main site when in the support portal. If you open it through the Fortumo's
+            website, then you open a new tab, which mitigates this issue. However, if someone gets this link from a call center or
+            something similar, then the only way of going to the company's website is through manual typing on the address bar.</p>
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code UX-11</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          <p>I asked a couple of non-IT people and they told me that the white on red text is hard to read, especially with long texts.
+          This is less noticeable when visiting the site through a desktop browser.</p>
         </li>
       </ul>
 
-      <h5>Other</h5>
-      <p>Other minor inconveniences I found that are not fully related to UX are: </p>
+      <h3>Performance Improvements</h3>
+      <p>It is important to note that Opera is my default browser, so my testing was done primarily in it. This is the only performance issue I found: </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code PE-01</span>
+            <span class="badge badge-warning">Medium</span>
+          </p>
+          <p>Scrolling to the bottom after selecting an option takes something like half a second to execute.</p>
+        </li>
+      </ul>
+      
+      <h3>Compatibility Issues</h3>
+      <p>As previously noted, the majority of my tests were done in Opera. However, these are all the browsers used for tests:</p>
+      <ul>
+        <li>Opera, version 51.0 on Windows 10</li>
+        <li>Google Chrome, version 64.0.3282.140 on Windows 10</li>
+        <li>Firefox, version 58.0.2 on Windows 10</li>
+        <li>Google Chrome, version 64.0.3282.137 on a Samsung Galaxy S8 running Android 7.0</li>
+        <li>Google Chrome, version 63.0.3239.111 on a Samsung Galaxy J5 2016 running Android 6.0.1</li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code CO-01</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          <p>This issue is partially related to UX-04. On Google Chrome and Opera for desktop, scrolling after selecting an option is
+            completely disabled. However, Firefox allows you to scroll sometimes, especially after finishing a flow. The easiest
+            example is selecting:</p>
+          <p>I'm not able to make a payment > Estonia > Telia > Prepaid SIM</p>
+          <p>I've had instances of Opera unblocking scrolling but they are not easily replicable. However, all desktop browsers unlock
+            if you set the zoom level to 110%. Mobile versions do not block scroll, though.</p>
+        </li>
+        <li class="list-group-item">
+          <p>
+            <span class="issue-code">Code CO-02</span>
+            <span class="badge badge-info">Minor</span>
+          </p>
+          <p>When clicking on a chat bubble from a mobile device, the whole cells lights up (like, a blue shadow that signals that you have touched something) instead of the cell only. This only happen for the red cells, not the user input.</p>
+        </li>
+      </ul>
+      
+      <p>Other than that, the page performs really well across different browsers. It reacts quickly to clicks, without taking into account the slight delay mentioned in PE-01.</p>
+
+      <h3>Security Vulnerabilities</h3>
+      <p>There are no security vulnerabilities I could think of. The only small part where security could be compromised is through the input of the email address, since it is the only non-numeric field where user has to write text. However, even that is a stretch.</p>
+
+      <h3>Technologies Used</h3>
+      <p>The website was done in Angular 2+. There's also a Google Analytics plugin added, and the package Normalize.css was used. I guess the regular way of building an Angular app for production (ng build) was used for generating the necessary conditions for deployment.</p>
+
+      <h3>Other</h3>
+      <p>Other minor inconveniences I found that are not fully related to the previous categories are:</p>
       <ul class="list-group">
         <li class="list-group-item">
           <p>
             <span class="issue-code">Code OT-01</span>
             <span class="badge badge-info">Minor</span>
           </p>
-           As of time of writing, the year in the footer says "2017."
+          <p>As of time of writing, the year in the footer says "2017."</p>
         </li>
       </ul>
-      
-      <h3>Performance Improvements</h3>
-      
-      <h3>Compatibility Issues</h3>
-      
-      <h3>Security Vulnerabilities</h3>
-      
-      <h3>Technologies Used</h3>
     </mat-card-content>
   </mat-card>
   
