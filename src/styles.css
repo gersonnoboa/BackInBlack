@@ -6,7 +6,7 @@
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-html {
+html, app-root {
     height: 100%;
 }
 
@@ -16,7 +16,7 @@ body {
     margin: 0px;
 }
 
-.content-container {
+.padded-content-container {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 10px;
