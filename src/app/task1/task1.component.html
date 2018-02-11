@@ -1,20 +1,26 @@
 <div class="table-container height-100 width-100">
-  <div class="table-row inner-toolbar">
+  <!-- <div class="table-row inner-toolbar">
     <mat-toolbar class="inner-toolbar">Task 1</mat-toolbar>
-  </div>  
+  </div> -->
   <div class="table-row">
-    <mat-grid-list cols="2" rowHeight="fit" class="height-100" gutterSize="1px">
-      <mat-grid-tile>
-        <div class="height-100 width-100" style="background-color:red;">Hola</div>
+    <mat-grid-list cols="2" rowHeight="fit" class="height-100" gutterSize="20px">
+      <mat-grid-tile [rowspan]="2">
+        <ngx-charts-bar-vertical [results]="chartData.values" [scheme]="chartData.colorScheme" [xAxis]="true" [yAxis]="true"
+          [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxisLabel]="chartData.xAxis" [yAxisLabel]="chartData.yAxis">
+        </ngx-charts-bar-vertical>
       </mat-grid-tile>
       <mat-grid-tile>
-        <div class="height-100 width-100" style="background-color:blue;">Hola</div>
+        <ngx-charts-linear-gauge [value]="chartData.lastValue" [scheme]="chartData.lastColorScheme" [min]="0" [max]="chartData.maxValue"
+        [units]="chartData.yAxis"></ngx-charts-linear-gauge>
       </mat-grid-tile>
+      <!-- <mat-grid-tile>
+        <ngx-charts-gauge [results]="chartData.values" [scheme]="chartData.colorScheme" [min]="0" [max]="chartData.maxValue" 
+        [angleSpan]="240" [startAngle]="-120" [units]="chartData.yAxis" [bigSegments]="10" [smallSegments]="5">
+        </ngx-charts-gauge>
+      </mat-grid-tile> -->
       <mat-grid-tile>
-        <div class="height-100 width-100" style="background-color:yellow;">Hola</div>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <div class="height-100 width-100" style="background-color:green;">Hola</div>
+        <ngx-charts-number-card [results]="chartData.values" [scheme]="chartData.colorScheme">
+        </ngx-charts-number-card>
       </mat-grid-tile>
     </mat-grid-list>
   </div>

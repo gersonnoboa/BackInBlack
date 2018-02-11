@@ -21,3 +21,7 @@ body {
     margin-right: 50px;
     margin-top: 10px;
 }
+
+.chart-legend .legend-label-text {
+    color: #444;
+}

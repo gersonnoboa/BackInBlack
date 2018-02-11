@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { Task1Component } from './task1/task1.component';
 import { Task2Component } from './task2/task2.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 const appRoutes: Routes = [
   { path: 'task1', component: Task1Component },
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MaterialModule,
     RouterModule.forRoot(appRoutes),
+    NgxChartsModule
   ],
   exports: [
     MaterialModule
